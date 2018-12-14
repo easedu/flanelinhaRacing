@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cadastro
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Avatar</ion-label>
+    <ion-select [(ngModel)]="avatar" interface="action-sheet">
+      <ion-option *ngFor="let avatar of listaAvatar" [value]="avatar.name">{{avatar.name}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button block (click) ="cadastrar()">CADASTRAR</button>
+</ion-content>
